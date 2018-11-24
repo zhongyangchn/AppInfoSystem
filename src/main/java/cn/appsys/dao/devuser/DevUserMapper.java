@@ -1,8 +1,8 @@
 package cn.appsys.dao.devuser;
 
 import cn.appsys.pojo.DevUser;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.apache.ibatis.annotations.Param;
 
 public interface DevUserMapper {
-    public DevUser getLoginUser(@RequestParam String devCode);
+    public DevUser getLoginUser(@Param("devCode")String devCode);
 }

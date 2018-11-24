@@ -8,9 +8,8 @@
   <artifactId>appInfoSystem</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
-
   <name>appInfoSystem Maven Webapp</name>
-  <!-- FIXME change it to the project's website -->
+  <!--FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
@@ -109,8 +108,9 @@
       <dependency>
           <groupId>mysql</groupId>
           <artifactId>mysql-connector-java</artifactId>
-          <version>8.0.11</version>
+          <version>3.1.14</version>
       </dependency>
+
       <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
       <dependency>
           <groupId>org.springframework</groupId>
@@ -190,6 +190,7 @@
       </dependency>
   </dependencies>
 
+
   <build>
     <finalName>appInfoSystem</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -225,5 +226,14 @@
         </plugin>
       </plugins>
     </pluginManagement>
+
+      <resources>
+          <resource>
+              <directory>src/main/java</directory>
+          </resource>
+          <resource>
+              <directory>src/main/resources</directory>
+          </resource>
+      </resources>
   </build>
 </project>

@@ -6,8 +6,8 @@ public interface DevUserService {
     /**
      * 登陆验证
      * @param devCode
-     * @param password
+     * @param devPassword
      * @return
      */
-    public DevUser login(String devCode, String password);
+    public DevUser login(String devCode, String devPassword) throws  Exception;
 }

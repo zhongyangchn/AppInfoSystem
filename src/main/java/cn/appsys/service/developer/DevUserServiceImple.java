@@ -12,17 +12,16 @@ public class DevUserServiceImple implements DevUserService {
     /**
      * 登陆验证
      * @param devCode
-     * @param password
+     * @param devPassword
      * @return
      */
     @Override
-    public DevUser login(String devCode, String password) {
-        DevUser user= null;
+    public DevUser login(String devCode, String devPassword) {
+        DevUser user=  null ;
         user = mapper.getLoginUser(devCode);
         if(null!=user){
-            if(user.getDevPassword().equals(password)){
+            if(!user.getDevPassword().equals(devPassword))
                 user = null;
-            }
         }
         return user;
     }
